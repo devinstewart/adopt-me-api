@@ -1,5 +1,5 @@
 # Adopt Me! Api
-API Server for my implementation of Adopt Me! App.  From [Brian Holt's](https://frontendmasters.com/teachers/brian-holt/) course on [React v18](https://frontendmasters.com/courses/intermediate-react-v5/).
+API Server for my implementation of Adopt Me! App.  From [Brian Holt's](https://frontendmasters.com/teachers/brian-holt/) course on [React v18](https://frontendmasters.com/courses/complete-react-v8/).
 
 I also heard some folks talking about [Prisma](https://www.prisma.io/) so I decided to give it a try. The server is built with [hapi](https://hapi.dev/), my favorite Node.js framework.
 
