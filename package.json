@@ -1,0 +1,31 @@
+{
+  "name": "pets-prisma-hapi",
+  "version": "1.0.0",
+  "description": "API for Adopt me app with Prisma and hapi",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "db:create": "prisma migrate dev",
+    "format": "prettier --write \"./**/*.js\"",
+    "lint": "eslint  \"./**/*.js\" --quiet",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "prisma": {
+    "schema": "prisma/schema.prisma",
+    "seed": "node prisma/seed.js"
+  },
+  "author": "Devin Stewart",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/hapi": "^21.1.0",
+    "@prisma/client": "^4.8.0",
+    "joi": "^17.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.1",
+    "prisma": "^4.8.0"
+  }
+}

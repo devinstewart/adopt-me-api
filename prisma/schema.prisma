@@ -1,0 +1,54 @@
+datasource db {
+    provider = "sqlite"
+    url      = "file:sqlite.db"
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model animals {
+    id     Int      @id @default(autoincrement())
+    name   String   @unique
+    breeds breeds[]
+}
+
+model breeds {
+    id       Int     @id @default(autoincrement())
+    name     String  @unique
+    animalId Int
+    animal   animals @relation(fields: [animalId], references: [id])
+    pets     pets[]
+}
+
+model states {
+    id   Int      @id @default(autoincrement())
+    name String   @unique
+    city cities[]
+}
+
+model cities {
+    id      Int    @id @default(autoincrement())
+    name    String
+    stateId Int
+    state   states @relation(fields: [stateId], references: [id])
+    pets    pets[]
+}
+
+model pets {
+    id          Int      @id @default(autoincrement())
+    name        String
+    breedId     Int
+    cityId      Int
+    description String
+    breed       breeds   @relation(fields: [breedId], references: [id])
+    city        cities   @relation(fields: [cityId], references: [id])
+    images      images[]
+}
+
+model images {
+    id    Int    @id @default(autoincrement())
+    url   String @unique
+    petId Int
+    pet   pets   @relation(fields: [petId], references: [id])
+}

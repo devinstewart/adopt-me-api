@@ -1,0 +1,17 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "prettier"
+    ],
+    "rules": {
+        "func-style": ["error", "expression"],
+        "strict": ["error", "global"]
+    },
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "env": {
+        "es6": true,
+        "node": true
+    }
+}
