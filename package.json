@@ -1,5 +1,5 @@
 {
-  "name": "pets-prisma-hapi",
+  "name": "adopt-me-api",
   "version": "1.0.0",
   "description": "API for Adopt me app with Prisma and hapi",
   "main": "index.js",
