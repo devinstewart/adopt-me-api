@@ -23,3 +23,15 @@ Finally, start the server:
 npm run dev
 ```
 The server will be running on port 3000 via [nodemon](https://nodemon.io/).
+
+## Thoughts on Prisma
+**What I like:**
+- Migrations are easy to create and run
+- Seeding is easy to do
+- Was able to get hooked up to hapi quickly, would be easy to hook up to other frameworks as well
+- Typescript and Javascript support
+- Good documentation
+
+**What I don't like:**
+- Doesn't do JOINs, so a query with 3 tables will produce 3 queries to the database
+- Creates nested objects for relationships, had to use `Array.map` or create a new `Object` to flatten the data after it was returned
